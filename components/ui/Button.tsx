@@ -19,8 +19,9 @@ const Button = ({ children, icon, className = '', variant = 'primary', ...props 
       className={`${baseStyles} ${variants[variant]} ${className}`}
       {...props}
     >
-      {children}
       {icon && <span className="flex items-center justify-center">{icon}</span>}
+      {children}
+      
     </button>
   );
 };

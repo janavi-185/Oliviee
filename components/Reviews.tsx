@@ -69,9 +69,9 @@ const Reviews = () => {
         {/* Right Side: Header & Tina B. Card */}
         <div className="flex flex-col items-start gap-12 order-1 lg:order-2">
           <div className="max-w-md">
-            <h2 className="text-6xl md:text-8xl font-normal text-olive-primary leading-[0.9] mb-8">
+            <h2 className="text-4xl md:text-6xl font-normal text-olive-primary leading-[0.9] mb-8">
               Real Mothers<br />
-              <span className="font-normal italic">Real Results</span>
+              <span className="font-normal">Real Results</span>
             </h2>
             <button className="flex items-center gap-2 text-olive-primary/80 font-medium hover:text-olive-primary transition-all text-xl group">
               read all 3,147+ reviews

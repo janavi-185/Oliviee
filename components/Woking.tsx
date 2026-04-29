@@ -53,7 +53,7 @@ const Woking = () => {
       description: "Once analyzed, Olive provides tailored insights and healthier product suggestions. Olive proactively flags harmful ingredients and offers personalized recommendations, empowering you to make better choices for your family's health & nutrition.",
       visual: (
         <div className="relative w-full h-full flex items-center justify-center bg-white/50 rounded-2xl overflow-hidden p-4">
-          <div className="relative w-full h-full max-w-[280px]">
+          <div className="relative w-full h-44 max-w-[280px]">
             <Image 
               src="/images/insights_stack.png" 
               alt="Insights" 
@@ -67,31 +67,32 @@ const Woking = () => {
   ];
 
   return (
-    <section className="w-full max-w-7xl mx-auto py-30 px-4 md:px-4">
-      <div className="flex flex-col items-center text-center mb-30 relative">
-        <h2 className="text-4xl md:text-6xl font-normal text-olive-primary max-w-2xl leading-tight">
-          How the Olive Food <br /> Scanner App Works
+    <section className="w-full max-w-7xl flex flex-col items-center justify-center mx-auto py-30 px-4 md:px-4">
+      <div className="flex p-5 max-w-3xl  flex-row items-center justify-center mb-20">
+        <h2 className="text-4xl text-center md:text-5xl font-normal text-olive-primary max-w-4xl leading-tight">
+          How the Olive Food Scanner App Works
         </h2>
-        <div className="absolute right-0 top-0 md:right-17 md:top-6 w-15 h-15 md:w-32 md:h-32 animate-float">
+        <div className="shrink-0 ">
           <Image 
-            src="/images/avocado.png" 
+            src="/images/image.png" 
             alt="Avocado" 
-            fill 
+            width={128}
+            height={128}
             className="object-contain"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid max-w-6xl w-full grid-cols-1 md:grid-cols-3 gap-6">
         {steps.map((step, index) => (
-          <div key={index} className="flex flex-col gap-6 p-8 rounded-2xl bg-[#f5f9f0]  transition-all duration-300 group">
-            <h3 className="text-lg font-bold text-olive-primary">
+          <div key={index} className="flex flex-col gap-4 p-6 rounded-2xl bg-[#f5f9f0] transition-all duration-300 group">
+            <h3 className="text-sm font-bold text-olive-primary">
               {step.title}
             </h3>
-            <div className=" w-full">
+            <div className="w-full h-52">
               {step.visual}
             </div>
-            <p className="text-[#6B725E]  text-sm md:text-sm font-medium">
+            <p className="text-[#6B725E] text-sm font-medium leading-relaxed">
               {step.description}
             </p>
           </div>

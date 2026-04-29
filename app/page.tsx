@@ -2,6 +2,9 @@ import Hero from "@/components/Hero";
 import Woking from "@/components/Woking";
 import Benifits from "@/components/Benifits";
 import Reviews from "@/components/Reviews";
+import Features from "@/components/Features";
+import FAQ from "@/components/FAQ";
+
 
 export default function Home() {
   return (
@@ -9,9 +12,12 @@ export default function Home() {
       <div className="w-full p-4 md:p-9 space-y-12 md:space-y-20">
         <Hero />
         <Woking />
-        <Benifits />
-        <Reviews />
       </div>
+      <Benifits />
+      <Reviews />
+      <Features />
+      <FAQ />
+
     </div>
   );
 }

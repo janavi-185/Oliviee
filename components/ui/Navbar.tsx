@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { HiChevronDown, HiArrowRight, HiMenu, HiX } from 'react-icons/hi';
 import Button from './Button';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,16 +14,13 @@ const Navbar = () => {
       <nav className=" w-full h-16 md:h-20 bg-transparent px-2 flex items-center justify-between  z-50 transition-all duration-300">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="relative w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <path d="M16 28C21.5228 28 26 23.5228 26 18C26 12.4772 21.5228 8 16 8C10.4772 8 6 12.4772 6 18C6 23.5228 10.4772 28 16 28Z" fill="#A5C933" />
-              <path d="M16 8C16 8 14 2 20 2" stroke="#4B662C" strokeWidth="2" strokeLinecap="round" />
-              <circle cx="12" cy="18" r="1.5" fill="#1A2410" />
-              <circle cx="20" cy="18" r="1.5" fill="#1A2410" />
-              <path d="M14 21C14 21 15 22 16 22C17 22 18 21 18 21" stroke="#1A2410" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </div>
-          <span className="text-xl md:text-5xl font-bold tracking-tight text-[#A5C933]">olive</span>
+          <Image
+            src="/images/logo.png"
+            alt="Olive Logo"
+            width={180}
+            height={68}
+            className="object-contain h-10 md:h-12 w-auto"
+          />
         </div>
 
         {/* Desktop Nav Links */}
