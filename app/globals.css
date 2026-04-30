@@ -40,6 +40,7 @@ body {
 
 @keyframes carousel-scroll {
   0%   { transform: translateX(0); }
+  50% { transform: translateX(-25%); }
   100% { transform: translateX(-50%); }
 }
 
@@ -53,12 +54,10 @@ body {
   50%       { transform: translateY(-5px); }
 }
 
-.animate-scan-line {
-  animation: scan-line 3s ease-in-out infinite;
-}
+
 
 .animate-carousel-scroll {
-  animation: carousel-scroll 20s linear infinite;
+  animation: carousel-scroll 15s linear infinite;
 }
 
 .animate-float {
@@ -67,5 +66,9 @@ body {
 
 .animate-bounce-subtle {
   animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-scan-line-slow {
+  animation: scan-line 3s ease-in-out infinite;
 }
 

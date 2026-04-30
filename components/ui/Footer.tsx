@@ -57,13 +57,13 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto bg-[#386641] rounded-[48px] p-8 md:p-16 text-white overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+      <div className="w-full max-w-9xl mx-auto bg-[#386641] rounded-[59px] p-8 md:p-16 md:px-40 text-white overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-30 mb-16">
           
           {/* Links Column 1 */}
-          <div className="lg:col-span-3 flex flex-col gap-6">
-            <h4 className="font-semibold text-lg">Explore More Olive Tools</h4>
-            <ul className="flex flex-col gap-3 text-white/80 text-sm">
+          <div className="lg:col-span-3 flex flex-col gap-4">
+            <h4 className="text-lg">Explore More Olive Tools</h4>
+            <ul className="flex flex-col gap-3 text-white/80 text-md">
               <li><Link href="#" className="hover:text-white transition-colors">Explore Foods</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Allergy Scanner App</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Gluten Free Scanner</Link></li>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Spacer for desktop */}
-          <div className="hidden lg:block lg:col-span-1"></div>
+          {/* <div className="hidden lg:block lg:col-span-1"></div> */}
 
           {/* Newsletter Column */}
           <div className="lg:col-span-5 flex flex-col gap-6">
@@ -93,7 +93,7 @@ const Footer = () => {
                 alt="Olive Logo" 
                 width={100} 
                 height={40} 
-                className="brightness-0 invert h-auto w-auto" 
+                className=" h-auto w-auto" 
               />
             </div>
             <p className="text-white/90 max-w-sm leading-relaxed">
@@ -101,14 +101,14 @@ const Footer = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 items-center">
-              <div className="relative w-full">
+              <div className="relative">
                 <input 
                   type="email" 
                   placeholder="Enter Email address" 
-                  className="w-full bg-[#4a7a53] border-none rounded-full px-6 py-4 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/20"
+                  className="w-ful l bg-[#4a7a53] border-none rounded-full px-6 py-4 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/20"
                 />
               </div>
-              <Button variant="white" className="w-full sm:w-auto px-10 py-4 !rounded-full">
+              <Button variant="white" className="w-full sm:w-1/3 px-10 py-4 rounded-full!">
                 Subscribe
               </Button>
             </div>

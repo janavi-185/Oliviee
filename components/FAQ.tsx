@@ -39,14 +39,14 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
   return (
     <div className="border-b border-[#c8c4a8] last:border-0">
       <button
-        className="w-full flex items-center justify-between py-5 text-left gap-4 cursor-pointer"
+        className="w-full flex items-center justify-between py-9 text-left gap-4 cursor-pointer"
         onClick={() => setOpen(!open)}
       >
         <span className="text-[#253612] text-sm md:text-base font-normal">{question}</span>
-        <span className="shrink-0 w-8 h-8 rounded-full bg-[#253612] flex items-center justify-center">
+        <span className="shrink-0 w-6 h-6 rounded-full bg-[#253612] flex items-center justify-center">
           {open
-            ? <HiMinus className="w-4 h-4 text-white" />
-            : <HiPlus className="w-4 h-4 text-white" />
+            ? <HiMinus className="w-3 h-3 text-white" />
+            : <HiPlus className="w-3 h-3 text-white" />
           }
         </span>
       </button>
@@ -81,7 +81,7 @@ export default function FAQ() {
         </div>
       </div>
 
-      <div className="w-full max-w-4xl mx-auto bg-[#FFF9EB] rounded-3xl px-8 md:px-16 py-14 md:py-20 relative overflow-hidden">
+      <div className="w-full max-w-6xl bg-[#FFF9EB] mx-40 rounded-4xl px-8 md:px-16 py-14 md:py-25 relative overflow-hidden">
 
         {/* Header */}
         <div className="flex flex-col items-center mb-12 relative">
