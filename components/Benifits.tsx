@@ -46,7 +46,7 @@ export default function Benifits() {
     <section className="w-full bg-[#F7FAF5] flex-col flex items-center justify-center  overflow-hidden my-4">
       {/* Dark Green Header */}
       <div
-        className="w-full bg-[#3D633D] px-8 md:px-50 pt-16 pb-40 md:pt-47 md:pb-47 "
+        className="w-full bg-[#386641] px-8 md:px-50 pt-16 pb-40 md:pt-47 md:pb-47 "
       >
         <div className='w-full flex flex-col md:flex-row items-start  gap-5 '>
         {/* Left: Title */}
@@ -260,7 +260,7 @@ export default function Benifits() {
       </div>
 
       {/* Section 3: Real Health Outcomes */}
-      <div className="w-full max-w-5xl mt-8 mb-16 bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row min-h-[420px]">
+      <div className="w-full max-w-5xl mt-8 mb-30 bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row min-h-[420px]">
         {/* Left half: title top, bullets bottom */}
         <div className="w-full md:w-1/2 p-1 flex flex-col justify-center">
           <div className="md:p-4 rounded-lg h-full flex flex-col justify-start">

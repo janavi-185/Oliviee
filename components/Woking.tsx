@@ -10,7 +10,7 @@ const Woking = () => {
       title: "Scan & Detect",
       description: "When you open Olive simply scan the barcode to instantly detect product ingredients. Olive's intuitive design means busy parents can quickly see which items contain harmful substances, delivering peace of mind with every scan.",
       visual: (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-white/50">
+        <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-[#F5FAF6]">
           <div className="relative w-48 h-48 md:w-56 md:h-56">
             <Image 
               src="/images/product_scan.png" 
@@ -35,7 +35,7 @@ const Woking = () => {
           <div className="relative w-full h-32 md:h-40 overflow-hidden">
              <div className="flex gap-4 animate-carousel-scroll items-center">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0 bg-white rounded-xl shadow-sm border border-black/5 overflow-hidden">
+                  <div key={i} className="relative w-24 h-24 md:w-32 md:h-32 shrink-0 bg-white rounded-xl shadow-sm border border-black/5 overflow-hidden">
                     <Image src="/images/products_carousel.png" alt="Product" fill className="object-cover" />
                   </div>
                 ))}
@@ -85,8 +85,8 @@ const Woking = () => {
 
       <div className="grid max-w-6xl w-full grid-cols-1 md:grid-cols-3 gap-6">
         {steps.map((step, index) => (
-          <div key={index} className="flex flex-col gap-4 p-6 rounded-2xl bg-[#f5f9f0] transition-all duration-300 group">
-            <h3 className="text-sm font-bold text-olive-primary">
+          <div key={index} className="flex flex-col gap-4 p-6 rounded-2xl bg-[#F5FAF6] transition-all duration-300 group">
+            <h3 className="text-sm font-bold text-[#386641]">
               {step.title}
             </h3>
             <div className="w-full h-52">
@@ -99,37 +99,6 @@ const Woking = () => {
         ))}
       </div>
 
-      <style jsx>{`
-        @keyframes scan-line {
-          0% { top: 10%; }
-          50% { top: 90%; }
-          100% { top: 10%; }
-        }
-        @keyframes carousel-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0) rotate(0); }
-          50% { transform: translateY(-10px) rotate(5deg); }
-        }
-        @keyframes bounce-subtle {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
-        .animate-scan-line {
-          animation: scan-line 3s ease-in-out infinite;
-        }
-        .animate-carousel-scroll {
-          animation: carousel-scroll 20s linear infinite;
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-        .animate-bounce-subtle {
-          animation: bounce-subtle 2s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 };
