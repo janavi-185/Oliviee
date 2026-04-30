@@ -1,11 +1,11 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Button from './ui/Button';
 import { FaApple } from 'react-icons/fa';
 import { HiCheckCircle } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import { motion, useInView, animate } from 'framer-motion';
 
 const FloatingTag = ({ text, isSafe }: { text: string; isSafe: boolean }) => (
   <div className={`flex items-center gap-2 px-5 py-1.5 rounded-2xl text-sm whitespace-nowrap bg-black/10 backdrop-blur-sm text-black`}>
@@ -39,7 +39,29 @@ const bullets = [
   "Olive scores products out of 100 based on additives, seed oils, processing level, and detected toxins.",
   "Our ranking system is designed by registered holistic health experts, ensuring you and your family make informed decisions and improve health outcomes.",
 ];
- 
+
+const NumberCounter = ({ from, to }: { from: number; to: number }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (isInView && ref.current) {
+      const controls = animate(from, to, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          if (ref.current) {
+            ref.current.textContent = `${Math.round(latest)}/100`;
+          }
+        }
+      });
+      return () => controls.stop();
+    }
+  }, [isInView, from, to]);
+
+  return <span ref={ref} className="text-lg md:text-xl font-bold text-gray-500">{from}/100</span>;
+};
+
 export default function Benifits() {
 
   return (
@@ -137,7 +159,7 @@ export default function Benifits() {
             <div className="flex flex-col pr-10 gap-2">
               <h4 className="text-lg md:text-xl font-semibold text-[#0a1f0a] tracking-tight">Straus Ice Cream</h4>
               <div className="flex items-center gap-3">
-                <span className="text-lg md:text-xl font-bold text-gray-500 ">96/100</span>
+                <NumberCounter from={1} to={96} />
                 <span className=" text-sm font-normal text-gray-500 ">Excellent</span>
               </div>
             </div>
