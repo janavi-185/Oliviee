@@ -14,18 +14,18 @@ const Hero = () => {
           <main className="relative z-10 pt-15 w-full max-w-7xl px-4 md:px-6 flex flex-col items-center text-center">
             {/* Social Proof */}
             <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-15 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              <div className="flex -space-x-2 md:-space-x-3 overflow-hidden">
+              <div className="flex -space-x-2 md:-space-x-3 transition-all duration-300 ease-out group cursor-pointer">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div 
                     key={i} 
-                    className="inline-block h-8 w-8 md:h-10 rounded-full border-2 border-white bg-zinc-200 shadow-sm"
+                    className="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full border-2 border-white bg-zinc-200 shadow-sm relative transition-transform duration-300 hover:scale-105 hover:z-10"
                     style={{
                       backgroundImage: `url('https://i.pravatar.cc/100?u=${i}')`,
                       backgroundSize: 'cover'
                     }}
                   />
                 ))}
-                <div className="flex items-center justify-center h-8 px-3 md:h-10 md:px-4 rounded-full border-2 border-white bg-[#F3F4F1] text-[11px] md:text-[13px] font-semibold text-[#6B725E] shadow-sm">
+                <div className="flex items-center justify-center h-8  md:h-10 md:w-10 rounded-full border-2 border-white bg-[#F3F4F1] text-[11px] md:text-[13px] font-semibold text-[#6B725E] shadow-sm relative hover:z-10">
                   3k+
                 </div>
               </div>

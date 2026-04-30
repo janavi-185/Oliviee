@@ -61,9 +61,9 @@ const Woking = () => {
               <motion.div
                 key={i}
                 animate={{
-                  x: [500, -500],
-                  scale: [0.85, 1, 1.1, 1, 0.85],
-                  opacity: [0.3, 0.9, 1, 0.9, 0.3],
+                  x: [400, -400],
+                  scale: [0.5, 0.5, 1.1, 0.5, 0.5],
+                  opacity: [0, 0.6, 1, 0.6, 0],
                 }}
                 transition={{
                   duration: 16,
@@ -71,7 +71,7 @@ const Woking = () => {
                   ease: "linear",
                   delay: -i * 2,
                 }}
-                className="absolute w-24 h-24 md:w-28 md:h-28 bg-white rounded-4xl shadow-sm overflow-hidden border border-black/5"
+                className="absolute w-20 h-20 md:w-24 md:h-24 bg-white rounded-4xl shadow-sm overflow-hidden border border-black/5"
               >
                 {(() => {
                   const images = [

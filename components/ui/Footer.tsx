@@ -8,16 +8,18 @@ import { FaApple } from 'react-icons/fa';
 import Button from './Button';
 
 import { PiFlowerLotusLight } from 'react-icons/pi';
-import { HiOutlinePlusCircle } from 'react-icons/hi';
+import { CiCirclePlus } from "react-icons/ci";
+import { TbApple } from "react-icons/tb";
+
 
 const Footer = () => {
   return (
-    <footer className="w-full px-4 md:px-8 pb-8">
+    <footer className="w-full py-30 px-4 md:px-8 pb-8">
       {/* CTA Section */}
-      <div className="w-full max-w-7xl mx-auto rounded-[48px] overflow-hidden relative mb-8 min-h-[400px] md:min-h-[500px] flex items-center">
+      <div className="w-full mb-40 max-w-6xl  md:mx-35 rounded-[48px] overflow-hidden relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}
         <Image 
-          src="/Users/janavi/.gemini/antigravity/brain/aeac2f3e-46a2-4391-8867-72d5c632ce96/family_eating_restaurant_1777470117528.png"
+          src="/images/family.png"
           alt="Family eating together"
           fill
           className="object-cover brightness-[0.7]"
@@ -25,10 +27,10 @@ const Footer = () => {
         
         {/* Decorative Icons (Replaced SVGs) */}
         <div className="absolute top-[-5%] left-[-5%] w-64 h-64 opacity-30 text-white pointer-events-none">
-          <HiOutlinePlusCircle className="w-full h-full rotate-12" />
+          <CiCirclePlus className="w-full h-full font-bold rotate-15" />
         </div>
         <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 opacity-30 text-white pointer-events-none">
-          <PiFlowerLotusLight className="w-full h-full rotate-45" />
+          <TbApple className="w-full h-full " />
         </div>
 
         <div className="relative z-10 p-8 md:p-20 flex flex-col gap-8 max-w-2xl">
