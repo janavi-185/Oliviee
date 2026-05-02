@@ -7,6 +7,7 @@ import FAQ from "@/components/FAQ";
 import Scanner from "@/components/Scanner";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/ui/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       {/* <Features /> */}
       <FAQ />
       <Footer />
+      <Analytics />
     </div>
   );
 }
